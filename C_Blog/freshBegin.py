@@ -1,6 +1,6 @@
 import db
 
-username = "hating"
+username = "Daniel-TheProgrammer"
 password = "youshallnotpass"
 if __name__ == "__main__":
     db.createUser()
