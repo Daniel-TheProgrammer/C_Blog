@@ -40,19 +40,19 @@
 </head>
 <body>
 <div id="container">
-    <h1 id="welcome">欢迎登陆Shakespeare</h1>
+    <h1 id="welcome">DTP</h1>
     <div class="panel panel-default" id="login">
         <div class="panel-body">
             <form>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">用户名：</label>
+                    <label for="exampleInputEmail1">email：</label>
                     <input type="text" class="form-control" id="user" v-model="user">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">密码：</label>
+                    <label for="exampleInputPassword1">input：</label>
                     <input type="password" class="form-control" id="password" v-model="password">
                 </div>
-                <button type="submit" class="btn btn-default" v-on:click.prevent="do_login">登陆</button>
+                <button type="submit" class="btn btn-default" v-on:click.prevent="do_login">Buah</button>
                 <div class="alert alert-danger" role="alert" v-text="loginStatus" id="showStatus"
                      v-bind:style="{visibility:visibility}"></div>
             </form>
@@ -67,7 +67,7 @@
         data: {
             user: "",
             password: "",
-            loginStatus: "测试状态",
+            loginStatus: "Unknown",
             visibility: "hidden"
         },
         methods: {
@@ -82,10 +82,10 @@
                         result = JSON.parse(result);
                         if (result.status == "success") {
                             window.location.href = result.site;
-                            login.loginStatus = "成功登陆，正在为您跳转";
+                            login.loginStatus = "";
                             login.visibility = "visible";
                         } else if (result.status == "fail") {
-                            login.loginStatus = "登陆失败，请检查用户名以及密码是否正确。";
+                            login.loginStatus = "";
                             login.visibility = "visible";
                         }
                     }
