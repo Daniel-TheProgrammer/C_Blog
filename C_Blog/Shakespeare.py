@@ -67,7 +67,7 @@ def login():
 
 @app.route('/API/login/', methods=["POST"])
 def APIlogin():
-    result = json.loads(request.get_data())  # 验证用户名和密码
+    result = json.loads(request.get_data())  
     Md5 = hashlib.md5()
     Md5.update(result[1])
     Md5hex = Md5.hexdigest()
